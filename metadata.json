@@ -1,0 +1,6 @@
+{
+  "name": "Keralayaatra",
+  "description": "Premium Kerala Tour Planner, Taxi Cost Estimator, Local Homestay & Resort Bookings with Gemini AI trip curation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

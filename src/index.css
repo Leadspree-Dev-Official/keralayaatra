@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Brand-aligned colors from Design.md */
+  --color-brand-primary: #ffffff;
+  --color-brand-secondary: #12351e;
+  --color-brand-border: #0b421d;
+  --color-brand-inverse: #617366;
+  --color-brand-base: #000000;
+  --color-brand-raised: #a9c126;
+  --color-brand-strong: #fbfdfb;
+  
+  /* Rich deep-green surface backgrounds */
+  --color-brand-surface-card: #04140a;
+  --color-brand-surface-card-hover: #072512;
+  --color-brand-surface-card-selected: #0a361a;
+  
+  /* Shadows and timings */
+  --shadow-brand-1: rgba(7, 52, 22, 0.08) 0px 10px 30px 0px;
+  --shadow-brand-2: rgba(23, 120, 11, 0.25) 0px 12px 28px 0px;
+  --shadow-brand-3: rgba(169, 193, 38, 0.22) 0px 12px 28px 0px;
+  --shadow-brand-4: rgba(7, 52, 22, 0.14) 0px 18px 50px 0px;
+  
+  --animate-fade-in: fadeIn 0.4s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+}
+
+:root {
+  --brand-color: var(--color-brand-raised);
+  --brand-color-light: oklch(from var(--color-brand-raised) l c h / 0.1);
+  --brand-color-hover: oklch(from var(--color-brand-raised) calc(l - 0.1) c h);
+  --ring: var(--color-brand-raised);
+  --saffron: var(--color-brand-raised);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Base resets */
+html, body {
+  background-color: var(--color-brand-base);
+  color: var(--color-brand-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom interactive scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-raised);
+}
+
+/* Input styles focus states override */
+input, select, textarea {
+  transition: all 0.2s ease-in-out;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-brand-raised);
+  box-shadow: 0 0 0 2px rgba(169, 193, 38, 0.2);
+}
+
+/* Accessibility: Keyboard outline */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-raised);
+  outline-offset: 2px;
+}
