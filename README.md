@@ -1,5 +1,7 @@
 # Keralayaatra - Trusted Local Kerala Travel Partner
 
+🔗 **Live Demo:** [https://leadspree-dev-official.github.io/keralayaatra/](https://leadspree-dev-official.github.io/keralayaatra/)
+
 Keralayaatra is a highly customized, full-stack experiential travel curation portal for exploring Kerala with absolute local trust. It bypasses middlemen and deceptive brokers by calculating outstation taxi fares dynamically using standard regional motor union rates, offering verified sustainable homestays, and compiling customized day-by-day itineraries tailored directly to your budget and interests using Google Gemini AI.
 
 ---
@@ -54,15 +56,7 @@ Create a `.env` file in the root directory by copying the example:
 cp .env.example .env
 ```
 
-Open `.env` and configure your API key:
-
-```env
-# Gemini API Key (get yours from Google AI Studio or Google Cloud Console)
-GEMINI_API_KEY="your_actual_gemini_api_key_here"
-
-# Host URL of the deployed application (Optional)
-APP_URL="http://localhost:3000"
-```
+Open `.env` and configure your environment variables (see `.env.example` for reference).
 
 ### 3. Run Development Server
 
